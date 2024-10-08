@@ -17,19 +17,24 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Set up Haskell
-        uses: haskell/actions/setup@v1
+        uses: haskell-actions/setup@v1
         with:
           ghc-version: '9.2.5'
           cabal-version: '3.6.2.0'
+          stack-version: 'latest'
 
       - name: Install dependencies
         run: |
           cabal update
-          cabal install --only-dependencies --enable-tests
+          cabal build --only-dependencies --enable-tests
+
+      - name: Build project
+        run: |
+          cabal build --enable-tests
 
       - name: Run tests
         run: |
-          cabal test --enable-tests --test-show-details=streaming
+          cabal test --test-show-details=streaming
 
       - name: Run hlint
         run: |
@@ -45,4 +50,3 @@ jobs:
         run: |
           cabal install ormolu
           ormolu --mode check $(find . -name '*.hs')
-      
