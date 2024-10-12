@@ -1,6 +1,6 @@
-name:                lab
+name:                fp1_haskell
 version:             0.1.0.0
-github:              "githubuser/lab"
+github:              "githubuser/fp1_haskell"
 license:             BSD-3-Clause
 author:              "Author name here"
 maintainer:          "example@example.com"
@@ -45,7 +45,7 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - lab
+    - fp1_haskell
 
 tests:
   lab-test:
@@ -56,4 +56,4 @@ tests:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - lab
+    - fp1_haskell
