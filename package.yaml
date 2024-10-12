@@ -1,6 +1,6 @@
-name:                fp1_haskell
+name:                lab
 version:             0.1.0.0
-github:              "githubuser/fp1_haskell"
+github:              "githubuser/lab"
 license:             BSD-3-Clause
 author:              "Author name here"
 maintainer:          "example@example.com"
