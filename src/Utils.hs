@@ -9,7 +9,7 @@ readNumber = do
     return digits
 
 prod13 :: [Int] -> Int
-prod13 = foldl (*) 1
+prod13 = product
 
 divisors :: Int -> [Int]
 divisors n = nub $ concat [[x, div n x] | x <- [2..isqrt n], n `mod` x == 0]

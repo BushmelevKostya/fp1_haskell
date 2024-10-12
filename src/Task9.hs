@@ -10,7 +10,8 @@ filterNonAbundantSums :: Int -> Set.Set Int -> [Int]
 filterNonAbundantSums limit sumsOfAbundants = filter (`Set.notMember` sumsOfAbundants) (generateSequence limit)
 
 sumNumbers :: [Int] -> Int
-sumNumbers = foldr (+) 0
+sumNumbers = sum
+
 
 findAbundant :: [Int]
 findAbundant = filter isAbundant [12..28123]

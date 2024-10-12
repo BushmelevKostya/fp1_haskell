@@ -24,10 +24,11 @@ testTask1 = TestCase (do
 expectedOutput1 :: Int
 expectedOutput1 = 23514624000
 
+
 testTask2 :: Test
 testTask2 = TestCase (do
     number <- readNumber
-    assertEqual "Test recursion" expectedOutput2 $ recursion2)
+    assertEqual "Test recursion2" expectedOutput2 recursion2)
 
 expectedOutput2 :: Int
 expectedOutput2 = 4179871
