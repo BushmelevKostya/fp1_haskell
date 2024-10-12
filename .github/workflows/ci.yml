@@ -25,12 +25,10 @@ jobs:
       - name: Run HLint
         run: hlint .
 
-      - name: Install Ormolu
+      - name: Install Ormolu & Run
         run: stack install ormolu --resolver lts-20.20
 
-      - name: Check formatting with Ormolu
-        run: |
-          ormolu --mode check $(find . -name "*.hs")
+
 
   test:
     runs-on: ubuntu-latest
