@@ -37,6 +37,8 @@ ghc-options:
 
 library:
   source-dirs: src
+  dependencies:
+  - base >= 4.7 && < 5
 
 executables:
   lab-exe:
@@ -47,7 +49,9 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - fp1_haskell
+    - base >= 4.7 && < 5
+    - tasty
+    - tasty-hunit
 
 tests:
   lab-test:
@@ -58,4 +62,6 @@ tests:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - fp1_haskell
+    - base >= 4.7 && < 5
+    - tasty
+    - tasty-hunit
