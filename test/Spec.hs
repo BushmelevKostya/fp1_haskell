@@ -1,2 +1,14 @@
+-- Spec.hs
+import qualified Test2
+import Test.Tasty
+
 main :: IO ()
-main = putStrLn "Test suite not yet implemented"
+main = defaultMain tests
+
+tests :: TestTree
+tests =
+  testGroup
+    "All tests"
+    [
+      Test2.tests
+    ]
