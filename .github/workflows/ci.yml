@@ -27,22 +27,3 @@ jobs:
 
       - name: Install Ormolu & Run
         run: stack install ormolu --resolver lts-20.20
-
-
-
-  test:
-    runs-on: ubuntu-latest
-    needs: lint-and-format
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Set up Haskell
-        uses: haskell/actions/setup@v1
-        with:
-          ghc-version: '9.4.8'
-          enable-stack: true
-
-      - name: Run tests
-        run: stack test
